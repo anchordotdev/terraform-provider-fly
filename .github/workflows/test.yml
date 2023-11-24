@@ -57,8 +57,8 @@ jobs:
       - run: go mod download
       - env:
           TF_ACC: "1"
-          FLY_TF_TEST_APP: acctestapp
-          FLY_TF_TEST_ORG: fly-terraform-ci
+          FLY_TF_TEST_APP: fly-provider-test
+          FLY_TF_TEST_ORG: "Muhammad Atif Ali"
           FLY_API_TOKEN: ${{ secrets.FLY_AUTH_TOKEN_CI }}
         run: go test -v -cover ./internal/provider/
         timeout-minutes: 10
